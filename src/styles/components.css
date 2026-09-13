@@ -213,8 +213,8 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(14, 13, 12, 0.45) 0%, rgba(14, 13, 12, 0.82) 75%, #0e0d0c 100%),
-              linear-gradient(180deg, rgba(14, 13, 12, 0.6) 0%, transparent 40%, rgba(14, 13, 12, 0.8) 85%, #0e0d0c 100%);
+  background: radial-gradient(circle at center, rgba(14, 13, 12, 0.25) 0%, rgba(14, 13, 12, 0.50) 75%, #0e0d0c 100%),
+    linear-gradient(180deg, rgba(14, 13, 12, 0.6) 0%, transparent 40%, rgba(14, 13, 12, 0.8) 85%, #0e0d0c 100%);
   z-index: 2;
 }
 
@@ -308,10 +308,29 @@
 }
 
 @keyframes scrollPulse {
-  0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
-  50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
-  51% { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
-  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
 }
 
 /* ============================================================
@@ -926,30 +945,37 @@
   .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
+
   .about-media-composition {
     max-width: 500px;
     margin: 0 auto;
   }
+
   .location-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 768px) {
+
   .nav-links,
   .nav-actions .btn {
     display: none;
   }
+
   .menu-toggle {
     display: flex;
   }
+
   .nav-links.active {
     display: flex;
     flex-direction: column;
@@ -962,25 +988,31 @@
     border-bottom: 1px solid rgba(176, 138, 90, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   }
+
   .pillars-grid {
     grid-template-columns: 1fr;
   }
+
   .team-header-wrapper {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
   }
+
   .footer-top {
     grid-template-columns: 1fr;
   }
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
   }
+
   .floating-whatsapp span {
     display: none;
   }
+
   .floating-whatsapp {
     padding: 0.75rem;
   }
